@@ -1,33 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Lucas Barbou's Home</title>
+<meta charset="UTF-8">
+<title>Lucas Barbou's Home</title>
+<style>
+	body { font-family: Arial, sans-serif; background-color: white; color: #100; margin: 0; padding: 0; min-height: 100vh; display: flex; flex-direction: column; }
+
+	header { display: flex; align-items: center; padding: 20px; background-color: #3C6E71; }
+
+	header h1 { margin-right: auto; font-size: 24px; color: #fff; }
+
+	nav { display: block; }
+
+	nav a { font-size: 14px; margin-right: 20px; color: #fff; text-decoration: none; }
+
+	section { text-align: left; padding: 80px; flex: 1; }
+
+	section p { max-width: 500px; } 
+	footer { text-align: left; padding: 20px; background-color: #D9D9D9; } 
+	
+	#imageContainer { display: flex; align-items: center; } 
+	#imageToShow { display: none; max-width: 100px; margin-right: 10px; } 
+	#dateTime { display: none; font-size: 14px; } 
+</style>
+
+<script>
+function toggleImage() {
+  var img = document.getElementById('imageToShow');
+  var dateTime = document.getElementById('dateTime');
+  var button = document.getElementById('toggleButton');
+
+  img.style.display = 'block';
+  button.style.display = 'none'; 
+
+  var now = new Date();
+  var formattedDateTime = now.toLocaleString(); 
+
+  dateTime.innerHTML = formattedDateTime; 
+  dateTime.style.display = 'inline-block'; 
+}
+</script>
+
 </head>
+<body>
 
-<body style="font-family: Arial, sans-serif; text-align: center; background-color: white; color: #333;">
-
+<header>
   <h1>Lucas Barbou</h1>
-
+  
   <nav>
-    <a href="AboutMe.html" style="margin-right: 20px; color: #333;">About Me</a>
-    <a href="MyWork.html" style="margin-right: 20px; color: #333;">My Work</a>
-    <a href="Documents.html" style="margin-right: 20px; color: #333;">Documents</a>
+    <a href="AboutMe.html">About Me</a>
+    <a href="MyWork.html">My Work</a>
+    <a href="Documents.html">Documents</a>
+  </nav>
 
-  <section>
-    <h2>Futures Trader & Finance Student</h2>
-    <p>Automating trading strategies, analyzing financial markets, and building systems for the future of finance.</p>
-  </section>
+</header>
 
-  <section>
-    <h2>What I Do</h2>
-    <p>Algorithmic Trading | Portfolio Management | Quantitative Analysis</p>
-  </section>
+<section>
+  <h2>Futures Trader & Finance Student</h2>
+  <p>Automating trading strategies, analyzing financial markets, and building systems for the future of finance.</p>
+  <h2>What I Do</h2>
+  <p>Algorithmic Trading | Portfolio Management | Quantitative Analysis</p>
+</section>
 
-  <footer>
-    <p>Contact: <a href="mailto:lucas@example.com" style="color: #333;">lucas@example.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/lucasbarbou" style="color: #333;">linkedin.com/in/lucasbarbou</a></p>
-  </footer>
+<footer>
+  <p>Contact: <a href="mailto:lucas@barbou.com">lucas@barbou.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/lucasbarbou">linkedin.com/in/lucasbarbou</a></p> 
+
+  <button id="toggleButton" onclick="toggleImage()">Show Image</button>
+  
+  <div id="imageContainer">
+    <img id="imageToShow" src="colorsss.png" alt="">
+    <span id="dateTime"></span>   </div>
+</footer>
 
 </body>
 </html>
