@@ -1,29 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Professional Documents</title>
-<style>
-    body { font-family: Arial, sans-serif; background-color: white; color: #333; margin: 0; padding: 0; min-height: 100vh; display: flex; flex-direction: column; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Documents</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f4f4f4;
+    }
 
-    header { display: flex; align-items: center; padding: 20px; background-color: #3C6E71; }
+    header {
+      position: sticky;
+      top: 0;
+     	
+      background-color: #3C6E71;
+     	 color: white;
+      	padding: 10px 20px;
+     	 display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-    header h1 { margin-right: auto; font-size: 24px; color: #fff; }
+    header h1 {
+      font-size: 1;
+    }
 
-    nav { display: flex; gap: 20px; }
-
-    nav a { font-size: 14px; color: #fff; text-decoration: none; }
-
-    main { flex: 1; padding: 80px; text-align: left; }
-
-    main h2 { font-size: 18px; margin-bottom: 5px; }
-
-    footer { padding: 20px; background-color: #D9D9D9; text-align: left; color: #333; }
+    nav a {
+      margin: 0 15px;
+      color: white;
     
-    footer a { color: #333; text-decoration: none; }
+
+	  text-decoration: none;
+      font-size: 1;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #D9D9D9;
+    }
+
+    section {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #3C6E71;
+      color: white;
+    }
+
+    section h2 {
+      font-size: 2;
+      margin-bottom: 10px;
+    }
+
+    .content {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 8px;
+    }
+
+
+
+
+
+
+    .content h3 {
+      font-size: 1;
+      margin-bottom: 10px;
+    }
+
+    .content a {
+      color: #3C6E71;
+      
+
+
+	text-decoration: underline;
+      font-size: 1;
+    }
+
+    footer {
+      background-color: #D9D9D9;
+      
+		color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #3C6E71;
+     	 text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
-
 <body>
 
   <header>
@@ -34,22 +111,25 @@
       <a href="Documents.html">Documents</a>
       <a href="AboutMe.html">About Me</a>
     </nav>
-</header>
+  </header>
 
-<main>
-    <h2>Documents</h2>
+  <section>
+    <h2>Professional Documents</h2>
+    <p>Explore and download my key professional documents below.</p>
+  </section>
 
-    <h2>Resume</h2>
-    <p><a href="Lucas Barbou Resume.pdf" target="_blank" style="color: #333; text-decoration: underline;">View My Resume (PDF)</a></p>
+  <div class="content">
+    <h3>Resume</h3>
+    <p><a href="Lucas Barbou Resume.pdf" target="_blank">View My Resume (PDF)</a></p>
 
-    <h2>Cover Letter</h2>
-    <p><a href="Lucas Barbou Cover Letter.pdf" target="_blank" style="color: #333; text-decoration: underline;">View My Cover Letter (PDF)</a></p>
-</main>
+    <h3>Cover Letter</h3>
+    <p><a href="Lucas Barbou Cover Letter.pdf" target="_blank">View My Cover Letter (PDF)</a></p>
+  </div>
 
 <footer>
-    <p>Contact: <a href="mailto:lucasfbarbou@gmail.com">lucasfbarbou@gmail.com</a> | 
-    <a href="https://www.linkedin.com/in/lucasbarbou/" target="_blank">LinkedIn: linkedin.com/in/lucasbarbou/</a></p>
-</footer>
+    <p>Contact: <a href="mailto:lucas@barbou.com">lucas@barbou.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/lucasbarbou">linkedin.com/in/lucasbarbou</a></p>
+  </footer>
 
 </body>
 </html>
