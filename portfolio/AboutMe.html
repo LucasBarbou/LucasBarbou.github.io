@@ -4,176 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-     
- padding: 0;
-      color: #100;
-      background-color: #f4f4f4;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-    
-
-
-	  background-color: #3C6E71;
-      color: white;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-
-    header h1 {
-      font-size: 1;
-    }
-
-    nav a {
-      margin: 0 15px;
-      color: white;
-      text-decoration: none;
-    
-
-	  font-size: 1;
-      transition: color 0.3s ease;
-    }
-
-
-
-    section {
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    section h1 {
-      font-size: 2;
-      margin-bottom: 20px;
-    }
-
-    section p {
-      font-size: 1;
-    	  max-width: 700px;
-      margin: 0 auto;
-      margin-bottom: 20px;
-    }
-
-    section img {
-      margin-top: 20px;
-    	  max-width: 200px;
-      height: 200px;
-   
-	   object-fit: fill;
-      border-radius: 0;
-    }
-
-    footer {
-      background-color: #D9D9D9;
-   
-	   color: #333;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    footer h2 {
-      margin-bottom: 20px;
-      font-size: 1;
-    }
-
-    footer a {
-      color: #3C6E71;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    footer form {
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    footer form label {
-      display: block;
-      font-size: 1;
-      margin: 10px 0 5px;
-    }
-
-    footer form input[type="text"],
-    footer form input[type="email"],
-    footer form input[type="number"] {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      margin-bottom: 20px;
-    }
-
-    footer form input[type="submit"] {
-      background-color: #3C6E71;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-
-
-    #numberValidation {
-      margin-top: 10px;
-      color: red;
-      font-size: 0.9;
-    }
-  </style>
 </head>
-<body>
+<body style="margin: 0; padding: 0; font-family: 'Poppins', sans-serif; background-color: #f4f4f4; color: #100;">
 
-  <header>
-    <h1>Lucas Barbou About Me</h1>
-    <nav>
-      <a href="Portfolio.html">Home</a>
-      <a href="MyWork.html">My Work</a>
-      <a href="Documents.html">Documents</a>
-      <a href="AboutMe.html">About Me</a>
-    </nav>
-  </header>
+  <div style="position: sticky; top: 0; background-color: #3C6E71; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center;">
+    <h1 style="margin: 0; font-size: 2;">Lucas Barbou About Me</h1>
+    <div style="display: flex; gap: 15px;">
+      <a href="Portfolio.html" style="text-decoration: none; color: white; font-size: 1;">Home</a>
+      <a href="MyWork.html" style="text-decoration: none; color: white; font-size: 1;">My Work</a>
+      <a href="Documents.html" style="text-decoration: none; color: white; font-size: 1;">Documents</a>
+      <a href="AboutMe.html" style="text-decoration: none; color: white; font-size: 1;">About Me</a>
+    </div>
+  </div>
 
-  <section>
-    <h1>About Me</h1>
-    <p>Hello! I'm Lucas Barbou, a futures trader and finance student with a focus on automated trading strategies and quantitative analysis.</p>
-    <img src="portrait.png" alt="Lucas Barbou Portrait">
-  </section>
+  <div style="text-align: center; padding: 60px 20px;">
+    <h1 style="font-size: 2; margin-bottom: 20px;">About Me</h1>
+    <p style="font-size: 1; max-width: 700px; margin: 0 auto; margin-bottom: 20px;">
+      Hello! I'm Lucas Barbou, a futures trader and finance student with a focus on automated trading strategies and quantitative analysis.
+    </p>
+    <img src="portrait.png" alt="Lucas Barbou Portrait" style="margin-top: 20px; max-width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+  </div>
 
-  <footer>
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:lbarbou@highpoint.edu">lbarbou@highpoint.edu</a></p>
+  <div style="background-color: #D9D9D9; padding: 40px 20px; text-align: center;">
+    <h2 style="margin-bottom: 20px; font-size: 1.5rem;">Contact Me</h2>
+    <p style="margin-bottom: 20px;">Email: <a href="mailto:lbarbou@highpoint.edu" style="text-decoration: none; color: #3C6E71;">lbarbou@highpoint.edu</a></p>
+    <form onsubmit="return validateNumber();" style="max-width: 500px; margin: 0 auto;">
+      <label for="fname" style="display: block; font-size: 1; margin-bottom: 5px;">First Name:</label>
+      <input type="text" id="fname" name="fname" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
 
-    <form onsubmit="return validateNumber();">
-      <label for="fname">First Name:</label>
-      <input type="text" id="fname" name="fname" required>
+      <label for="lname" style="display: block; font-size: 1; margin-bottom: 5px;">Last Name:</label>
+      <input type="text" id="lname" name="lname" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
 
-      <label for="lname">Last Name:</label>
-      <input type="text" id="lname" name="lname" required>
+      <label for="email" style="display: block; font-size: 1; margin-bottom: 5px;">Email:</label>
+      <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <label for="favnumber" style="display: block; font-size: 1; margin-bottom: 5px;">Number (between 1 and 10):</label>
+      <input type="number" id="favnumber" name="favnumber" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
 
-      <label for="favnumber">Number (between 1 and 10):</label>
-      <input type="number" id="favnumber" name="favnumber" required>
-
-
-      <input type="submit" value="Submit">
+      <input type="submit" value="Submit" style="background-color: #3C6E71; color: white; border: none; padding: 10px 20px; font-size: 1; border-radius: 5px; cursor: pointer;">
     </form>
-  </footer>
-
- 
+  </div>
 
 </body>
 </html>
